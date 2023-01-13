@@ -4,12 +4,15 @@
 :root {
     --primary: #c470db;
     --background: #282c33;
+    --word-color: #ffffff;
+    --gray: #abb2bf;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--word-color);
 }
 
 html {
@@ -21,4 +24,9 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+    background-color: var(--background);
+}
+
+a[href] {
+    text-decoration: none;
 }

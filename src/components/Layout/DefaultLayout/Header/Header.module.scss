@@ -1,0 +1,95 @@
+.wrapper {
+    width: 100%;
+    height: 24px;
+    margin: 32px 0 8px 0;
+    display: flex;
+    justify-content: center;
+    color: var(--word-color);
+}
+
+.inner {
+    height: 100%;
+    width: 1024px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 100%;
+    width: 16px;
+    display: flex;
+}
+
+.logo-name {
+    margin-left: 8px;
+    font-weight: 700;
+}
+
+.options {
+    display: flex;
+    margin-left: auto;
+    padding-right: 16px;
+    gap: 32px;
+}
+
+.hashtag {
+    color: var(--primary);
+}
+
+.active {
+    color: white;
+    font-weight: 600;
+}
+
+.projects-page,
+.about-page {
+    color: var(--gray);
+}
+
+.dropdown {
+    color: var(--gray);
+    position: relative;
+}
+
+.language-list {
+    display: none;
+}
+
+.current-language {
+    color: var(--gray);
+    position: relative;
+
+    &::after {
+        content: 'V';
+        display: inline-block;
+        scale: 1 0.3;
+        font-weight: 500;
+        margin-left: 4px;
+    }
+
+    &:hover {
+        color: var(--word-color);
+        cursor: pointer;
+    }
+
+    &:hover + .language-list {
+        display: block;
+    }
+}
+
+.language-list {
+    list-style: none;
+    border: 1px solid var(--gray);
+    color: var(--gray);
+}
+
+.language {
+    z-index: 999;
+    padding: 8px;
+    color: var(--gray);
+
+    &:hover {
+        color: var(--word-color);
+        cursor: pointer;
+    }
+}
