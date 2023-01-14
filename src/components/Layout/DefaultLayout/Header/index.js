@@ -10,7 +10,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <a href="#" className={cx('logo')}>
-                    <img src={images.logo} alt="Elias" />
+                    <img src={images.logo} alt="Apollo" />
                     <span className={cx('logo-name')}>Apollo</span>
                 </a>
                 <div className={cx('options')}>
