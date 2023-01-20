@@ -1,0 +1,15 @@
+.wrapper {
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: 1px solid var(--primary);
+    max-width: 162px;
+    padding: 8px 16px;
+
+    &:hover {
+        background-color: #383344;
+    }
+}
+
+.medium {
+    width: 143px;
+}

@@ -30,3 +30,109 @@ body {
 a[href] {
     text-decoration: none;
 }
+
+.h2 {
+    display: inline-block;
+    position: relative;
+    font-size: 3.2rem;
+    font-weight: 500;
+    float: none;
+    clear: both;
+
+    &::before {
+        content: '#';
+        color: var(--primary);
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 180px;
+        height: 1px;
+        background-color: var(--primary);
+        transform: translate(100%, -50%);
+        right: -16px;
+        top: 50%;
+    }
+}
+
+.path {
+    width: 100%;
+    display: block;
+
+    .path__name {
+        font-weight: 600;
+
+        &::before {
+            content: '/';
+            color: var(--primary);
+        }
+    }
+
+    .path__desc {
+        margin-top: 16px;
+        color: var(--gray);
+    }
+}
+
+.project {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    align-items: start;
+    margin-top: 48px;
+
+    .project-item {
+        border: 1px solid var(--gray);
+
+        .project-item__image {
+            width: 329px;
+            height: 184px;
+            border: 1px solid var(--gray);
+        }
+
+        .project-item__techs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            padding: 8px;
+            border-bottom: 1px solid var(--gray);
+
+            .project-item__tech {
+                list-style: none;
+                color: var(--gray);
+            }
+        }
+
+        .project-item__content {
+            padding: 16px;
+
+            .project-item__name {
+                font-weight: 500;
+            }
+
+            .project-item__desc {
+                color: var(--gray);
+                margin: 16px 0;
+            }
+
+            .project-item__links {
+                display: flex;
+                font-weight: 500;
+                gap: 8px;
+            }
+
+            .button {
+                display: inline-block;
+                border: 1px solid var(--primary);
+                padding: 8px 16px;
+
+                &:hover {
+                    background-color: #383344;
+                }
+            }
+        }
+    }
+}

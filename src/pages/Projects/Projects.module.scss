@@ -1,0 +1,27 @@
+.path {
+    width: 100%;
+    display: block;
+
+    .path__name {
+        font-weight: 600;
+
+        &::before {
+            content: '/';
+            color: var(--primary);
+        }
+    }
+
+    .path__desc {
+        margin-top: 16px;
+        color: var(--gray);
+    }
+}
+
+//decent section
+.decent {
+    width: 100%;
+}
+
+.small {
+    width: 100%;
+}
