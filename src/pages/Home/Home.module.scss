@@ -35,8 +35,8 @@
 
 .information-outline-logo {
     position: absolute;
-    width: 240px;
-    height: 240px;
+    width: 30vmin;
+    // height: 240px;
     top: 40px;
     left: 0;
     z-index: -1;
@@ -44,12 +44,14 @@
 
 .information-avatar {
     border-bottom: 1px solid var(--primary);
+    width: 60vmin;
 }
 
 .information-dots {
     position: absolute;
     right: 55px;
     top: 40%;
+    width: 12vmin;
 }
 
 .information-status {
@@ -63,9 +65,10 @@
     border: 1px solid var(--gray);
     font-weight: 500;
     gap: 8px;
+    color: var(--gray);
 
     a {
-        text-decoration: underline;
+        text-decoration: underline !important;
     }
 
     a:hover {
@@ -312,6 +315,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+    flex-wrap: wrap;
     gap: 32px;
     margin-top: 48px;
 
@@ -344,4 +348,31 @@
 .contact-media:hover {
     filter: brightness(0) invert(1);
     color: var(--word-color);
+}
+
+@media screen and (max-width: 1024px) {
+    .skills-content__skill-lists {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .information-outline-logo {
+        width: 30vmin;
+    }
+
+    .information-avatar {
+        width: 45vmin;
+    }
+
+    .information-dots {
+        width: 12vmin;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 608px) {
+    .information {
+        flex-wrap: wrap;
+    }
 }

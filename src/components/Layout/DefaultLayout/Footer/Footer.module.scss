@@ -65,3 +65,15 @@ footer {
     text-align: center;
     color: var(--gray);
 }
+
+@media screen and (max-width: 1024px) {
+    .footer-inner {
+        padding: 16px 16px 0 16px;
+    }
+}
+
+@media screen and (max-width: 608px) {
+    .footer-inner {
+        flex-wrap: wrap;
+    }
+}

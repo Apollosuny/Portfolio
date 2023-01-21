@@ -17,3 +17,10 @@
     align-items: center;
     gap: 112px;
 }
+
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 100%;
+        padding: 16px;
+    }
+}

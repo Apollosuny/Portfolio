@@ -12,6 +12,20 @@
     background-color: var(--background);
 }
 
+.menu {
+    position: absolute;
+    display: none;
+    top: 44px;
+    right: 16px;
+
+    .menu-icon {
+        width: 32px;
+        height: 32px;
+        color: var(--gray) !important;
+        cursor: pointer;
+    }
+}
+
 .media-header {
     display: none;
     position: fixed;
@@ -129,5 +143,30 @@
     &:hover {
         color: var(--word-color);
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .media-header {
+        display: none !important;
+    }
+
+    .inner {
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .options,
+    .dropdown {
+        display: none;
+    }
+
+    .inner {
+        padding: 16px;
+    }
+
+    .menu {
+        display: block;
     }
 }

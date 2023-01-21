@@ -88,8 +88,8 @@ a[href] {
         border: 1px solid var(--gray);
 
         .project-item__image {
-            width: 329px;
-            height: 184px;
+            max-width: 100%;
+            display: block;
             border: 1px solid var(--gray);
         }
 

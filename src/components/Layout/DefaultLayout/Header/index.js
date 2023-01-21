@@ -2,13 +2,18 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
-const languages = ['EN', 'RU', 'UA'];
 
 function Header() {
     return (
         <header className={cx('wrapper')}>
+            <div className={cx('menu')}>
+                <FontAwesomeIcon className={cx('menu-icon')} icon={faBars} />
+            </div>
             <div className={cx('media-header')}>
                 <span className={cx('media-header__line')}></span>
                 <div className={cx('media-header__links')}>
@@ -30,19 +35,19 @@ function Header() {
                 </a>
                 <div className={cx('options')}>
                     <Link to="/">
-                        <a href="#" id="home" className={cx('home-page', 'active')}>
+                        <a href="#" id="home" className={cx('home-page', 'active', 'page')}>
                             <span className={cx('hashtag')}>#</span>
                             home
                         </a>
                     </Link>
                     <Link to="/projects">
-                        <a href="#" id="project" className={cx('projects-page')}>
+                        <a href="#" id="project" className={cx('projects-page', 'page')}>
                             <span className={cx('hashtag')}>#</span>
                             projects
                         </a>
                     </Link>
                     <Link to="/about">
-                        <a href="#" id="about" className={cx('about-page')}>
+                        <a href="#" id="about" className={cx('about-page', 'page')}>
                             <span className={cx('hashtag')}>#</span>
                             about-me
                         </a>

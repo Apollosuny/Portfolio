@@ -1,6 +1,6 @@
 const images = {
     logo: require('~/assets/images/logo.svg').default,
-    avatar: require('~/assets/images/avatar.svg').default,
+    avatar: require('~/assets/images/avatar.png'),
     aboutMe: require('~/assets/images/about-me.png'),
     github: require('~/assets/images/github.svg').default,
     discord: require('~/assets/images/discord.svg').default,
