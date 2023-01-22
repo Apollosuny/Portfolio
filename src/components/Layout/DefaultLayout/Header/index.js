@@ -1,10 +1,9 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import Navbar from './Navbar';
 
 const cx = classNames.bind(styles);
 
@@ -16,7 +15,7 @@ function Header() {
             </div>
             <div className={cx('media-header')}>
                 <span className={cx('media-header__line')}></span>
-                <div className={cx('media-header__links')}>
+                <div id="media-links" className={cx('media-header__links')}>
                     <a href="https://discord.com/" className={cx('media')}>
                         <img src={images.discord} alt="discord" className={cx('media-icon')} />
                     </a>
@@ -33,36 +32,17 @@ function Header() {
                     <img src={images.logo} alt="Apollo" />
                     <span className={cx('logo-name')}>Apollo</span>
                 </a>
-                <div className={cx('options')}>
-                    <Link to="/">
-                        <a href="#" id="home" className={cx('home-page', 'active', 'page')}>
-                            <span className={cx('hashtag')}>#</span>
-                            home
-                        </a>
-                    </Link>
-                    <Link to="/projects">
-                        <a href="#" id="project" className={cx('projects-page', 'page')}>
-                            <span className={cx('hashtag')}>#</span>
-                            projects
-                        </a>
-                    </Link>
-                    <Link to="/about">
-                        <a href="#" id="about" className={cx('about-page', 'page')}>
-                            <span className={cx('hashtag')}>#</span>
-                            about-me
-                        </a>
-                    </Link>
+                <div id="options" className={cx('options')}>
+                    <Navbar />
                 </div>
-                <div className={cx('dropdown')}>
-                    {
-                        <>
-                            <span className={cx('current-language')}>EN</span>
-                            <ul className={cx('language-list')}>
-                                <li className={cx('language')}>RU</li>
-                                <li className={cx('language')}>UA</li>
-                            </ul>
-                        </>
-                    }
+                <div id="dropdown" className={cx('dropdown')}>
+                    <div className={cx('current-language')}>
+                        EN
+                        <div className={cx('language-list')}>
+                            <div className={cx('language')}>RU</div>
+                            <div className={cx('language')}>UA</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

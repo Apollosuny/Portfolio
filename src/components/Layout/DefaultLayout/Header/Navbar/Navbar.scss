@@ -1,0 +1,17 @@
+.page {
+    color: var(--gray);
+}
+
+.page:hover {
+    color: white;
+}
+
+.hashtag {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.active {
+    color: white !important;
+    font-weight: 700;
+}

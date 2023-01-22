@@ -375,4 +375,21 @@
     .information {
         flex-wrap: wrap;
     }
+
+    .information-image,
+    .information-avatar {
+        width: 100%;
+    }
+
+    .information-outline-logo {
+        width: 35%;
+    }
+
+    .information-dots {
+        right: 90px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
 }

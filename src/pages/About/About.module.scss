@@ -19,6 +19,7 @@
     display: flex;
     align-items: start;
     margin-top: 48px;
+    flex-wrap: wrap;
     gap: 16px;
 
     .skill-block {
@@ -60,5 +61,11 @@
         border: 1px solid var(--gray);
         color: var(--gray);
         padding: 8px;
+    }
+}
+
+@media screen and (max-width: 608px) {
+    .about {
+        flex-direction: column;
     }
 }
