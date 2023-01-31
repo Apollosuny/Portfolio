@@ -17,7 +17,7 @@
 
 .skill-content {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     margin-top: 48px;
     flex-wrap: wrap;
     gap: 16px;
@@ -37,8 +37,8 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            justify-content: start;
-            align-items: start;
+            justify-content: flex-start;
+            align-items: flex-start;
 
             .skill-block__item {
                 color: var(--gray);
@@ -54,7 +54,7 @@
 .fun-facts {
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
+    align-items: flex-start;
     gap: 16px;
     margin-top: 48px;
     .fact {

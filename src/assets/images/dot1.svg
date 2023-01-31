@@ -1,0 +1,32 @@
+<svg
+    width="100%"
+    viewBox="0 0 104 104"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <circle cx="4" cy="4" r="4" fill="#ABB2BF" />
+    <circle cx="4" cy="28" r="4" fill="#ABB2BF" />
+    <circle cx="4" cy="52" r="4" fill="#ABB2BF" />
+    <circle cx="4" cy="76" r="4" fill="#ABB2BF" />
+    <circle cx="4" cy="100" r="4" fill="#ABB2BF" />
+    <circle cx="28" cy="4" r="4" fill="#ABB2BF" />
+    <circle cx="28" cy="28" r="4" fill="#ABB2BF" />
+    <circle cx="28" cy="52" r="4" fill="#ABB2BF" />
+    <circle cx="28" cy="76" r="4" fill="#ABB2BF" />
+    <circle cx="28" cy="100" r="4" fill="#ABB2BF" />
+    <circle cx="52" cy="4" r="4" fill="#ABB2BF" />
+    <circle cx="52" cy="28" r="4" fill="#ABB2BF" />
+    <circle cx="52" cy="52" r="4" fill="#ABB2BF" />
+    <circle cx="52" cy="76" r="4" fill="#ABB2BF" />
+    <circle cx="52" cy="100" r="4" fill="#ABB2BF" />
+    <circle cx="76" cy="4" r="4" fill="#ABB2BF" />
+    <circle cx="76" cy="28" r="4" fill="#ABB2BF" />
+    <circle cx="76" cy="52" r="4" fill="#ABB2BF" />
+    <circle cx="76" cy="76" r="4" fill="#ABB2BF" />
+    <circle cx="76" cy="100" r="4" fill="#ABB2BF" />
+    <circle cx="100" cy="4" r="4" fill="#ABB2BF" />
+    <circle cx="100" cy="28" r="4" fill="#ABB2BF" />
+    <circle cx="100" cy="52" r="4" fill="#ABB2BF" />
+    <circle cx="100" cy="76" r="4" fill="#ABB2BF" />
+    <circle cx="100" cy="100" r="4" fill="#ABB2BF" />
+</svg>

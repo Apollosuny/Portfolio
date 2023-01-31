@@ -66,14 +66,23 @@ footer {
     color: var(--gray);
 }
 
+// Tablet & Mobile
 @media screen and (max-width: 1024px) {
     .footer-inner {
         padding: 16px 16px 0 16px;
     }
 }
 
-@media screen and (max-width: 608px) {
+@media (min-width: 740px) and (max-width: 1024px) {
+}
+
+@media (max-width: 739px) {
     .footer-inner {
         flex-wrap: wrap;
+    }
+
+    .footer-header {
+        flex-direction: column;
+        gap: 16px;
     }
 }

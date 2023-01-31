@@ -48,7 +48,7 @@ a[href] {
         content: '';
         display: block;
         position: absolute;
-        width: 180px;
+        width: 10vw;
         height: 1px;
         background-color: var(--primary);
         transform: translate(100%, -50%);
@@ -81,7 +81,7 @@ a[href] {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
-    align-items: start;
+    align-items: flex-start;
     margin-top: 48px;
 
     .project-item {
