@@ -370,19 +370,6 @@
 }
 
 @media (max-width: 739px) {
-    // .information-outline-logo {
-    //     width: 30vmin;
-    // }
-
-    // .information-avatar {
-    //     width: 45vmin;
-    // }
-
-    // .information-dots {
-    //     width: 12vmin;
-    //     right: 10px;
-    // }
-
     .information {
         flex-wrap: wrap;
     }
@@ -401,8 +388,8 @@
     }
 
     .projects-header {
-        flex-direction: column;
-        align-items: flex-start;
+        // flex-direction: column;
+        // align-items: flex-start;
     }
 
     .skills-content__outline-logo {

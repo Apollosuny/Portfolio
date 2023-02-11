@@ -2,18 +2,24 @@ import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
+import Project from '~/components/Project';
+import projects_data from '~/data/projects';
+import { useTranslation } from 'react-i18next';
 
 const cs = classNames.bind(styles);
+const first_3_projects = projects_data.slice(0, 3);
 
 function Home() {
+    const { t } = useTranslation();
     return (
         <>
             <div className={cs('information')}>
                 <div className={cs('information-content')}>
                     <h1 className={cs('information-title')}>
-                        Apollo is a <span>web designer </span>
+                        {/* Apollo is a <span>web designer </span>
                         and <span>front-end&nbsp;</span>
-                        developer
+                        developer */}
+                        {t('Home.title')}
                     </h1>
                     <p className={cs('information-desc')}>
                         He crafts responsive websites where technologies meet creativity
@@ -42,57 +48,19 @@ function Home() {
                         View all ~~&gt;
                     </a>
                 </div>
-                <div className={cs('project')}>
-                    <div className={cs('project-item')}>
-                        <img src={images.project1} alt="project1" className={cs('project-item__image')} />
-                        <ul className={cs('project-item__techs')}>
-                            <li className={cs('project-item__tech')}>Flask</li>
-                            <li className={cs('project-item__tech')}>Python</li>
-                            <li className={cs('project-item__tech')}>SCSS</li>
-                        </ul>
-                        <div className={cs('project-item__content')}>
-                            <h2 className={cs('project-item__name')}>ChertNodes</h2>
-                            <p className={cs('project-item__desc')}>Minecraft servers hosting</p>
-                            <div className={cs('project-item__links')}>
-                                <Button href="https://chernodes.ru/">Live =&gt;</Button>
-                                <Button href="https://figma.com/community/file/1149829028455305659">Figma =&gt;</Button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={cs('project-item')}>
-                        <img src={images.project2} alt="project2" className={cs('project-item__image')} />
-                        <ul className={cs('project-item__techs')}>
-                            <li className={cs('project-item__tech')}>Express</li>
-                            <li className={cs('project-item__tech')}>Node.js</li>
-                            <li className={cs('project-item__tech')}>React</li>
-                            <li className={cs('project-item__tech')}>RTK</li>
-                            <li className={cs('project-item__tech')}>Discord.js</li>
-                        </ul>
-                        <div className={cs('project-item__content')}>
-                            <h2 className={cs('project-item__name')}>ProtectX web</h2>
-                            <p className={cs('project-item__desc')}>Discord anti-crash bot</p>
-                            <div className={cs('project-item__links')}>
-                                <Button href="https://isecurity-protectx.tk/">Live =&gt;</Button>
-                                <Button href="https://figma.com/community/file/1168662007492356291">Figma =&gt;</Button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={cs('project-item')}>
-                        <img src={images.project3} alt="project3" className={cs('project-item__image')} />
-                        <ul className={cs('project-item__techs')}>
-                            <li className={cs('project-item__tech')}>Express</li>
-                            <li className={cs('project-item__tech')}>Node.js</li>
-                            <li className={cs('project-item__tech')}>EJS</li>
-                        </ul>
-                        <div className={cs('project-item__content')}>
-                            <h2 className={cs('project-item__name')}>Kahoot Answers</h2>
-                            <p className={cs('project-item__desc')}>Get anwsers from kahoot quiz</p>
-                            <div className={cs('project-item__links')}>
-                                <Button href="https://khanswers.vercel.app/">Live =&gt;</Button>
-                                <Button href="https://github.com/EliasDevis/kahoot-answers">Github =&gt;</Button>
-                            </div>
-                        </div>
-                    </div>
+                <div className={cs('project-list')}>
+                    {/* <Project />
+                    <Project />
+                    <Project /> */}
+                    {first_3_projects.map((project, index) => (
+                        <Project
+                            key={index}
+                            image={project.image}
+                            projectTechUsed={project.projectTechUsed}
+                            projectContent={project.projectContent}
+                            projectLinks={project.projectLinks}
+                        />
+                    ))}
                 </div>
             </div>
             <div className={cs('skills')}>

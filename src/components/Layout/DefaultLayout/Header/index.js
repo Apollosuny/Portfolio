@@ -2,10 +2,17 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Navbar from './Navbar';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Header() {
+    const [checked, setChecked] = useState(false);
+
+    const getClass = (event) => {
+        if (event.currentTarget.className) setChecked(false);
+    };
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('media-header')}>
@@ -35,8 +42,8 @@ function Header() {
                         <div className={cx('current-language')}>
                             EN
                             <div className={cx('language-list')}>
-                                <div className={cx('language')}>RU</div>
-                                <div className={cx('language')}>UA</div>
+                                <div className={cx('language')}>VI</div>
+                                <div className={cx('language')}>JP</div>
                             </div>
                         </div>
                     </div>
@@ -46,17 +53,24 @@ function Header() {
                         <img src={images.logo} alt="Apollo" />
                         <span className={cx('mobile__logo-name')}>Apollo</span>
                     </a>
-                    <input type="checkbox" id="mobile__input" className={cx('mobile__input')} />
+                    <input
+                        type="checkbox"
+                        id="mobile__input"
+                        checked={checked}
+                        onClick={() => setChecked(!checked)}
+                        onChange={(e) => {}}
+                        className={cx('mobile__input')}
+                    />
                     <div className={cx('mobile__options')}>
-                        <div id="options" className={cx('mobile__links')}>
+                        <div id="options" onClick={getClass} className={cx('mobile__links')}>
                             <Navbar />
                         </div>
                         <div id="dropdown" className={cx('mobile__dropdown')}>
                             <div className={cx('mobile__current-language')}>
                                 EN
-                                <div className={cx('mobile__language-list')}>
-                                    <div className={cx('mobile__language')}>RU</div>
-                                    <div className={cx('mobile__language')}>UA</div>
+                                <div className={cx('mobile__language-list')} onClick={getClass}>
+                                    <div className={cx('mobile__language')}>VI</div>
+                                    <div className={cx('mobile__language')}>JP</div>
                                 </div>
                             </div>
                         </div>
