@@ -1,0 +1,32 @@
+.tech-icon {
+    border: 2px solid var(--primary);
+    display: table;
+    text-align: center;
+    height: 158px;
+    width: 196px;
+    padding: 10px;
+    margin: 16px;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: all 0.4s ease 0s;
+    box-shadow: rgba(196, 112, 219, 0.4) 5px 5px, rgba(196, 112, 219, 0.3) 10px 10px, rgba(196, 112, 219, 0.2) 15px 15px,
+        rgba(196, 112, 219, 0.1) 20px 20px, rgba(196, 112, 219, 0.05) 25px 25px;
+
+    .tech-icon__image {
+        vertical-align: middle;
+        margin: 12px 0;
+    }
+
+    .tech-icon__name {
+        font-size: 1.6rem;
+        vertical-align: middle;
+        margin-bottom: 8px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+        box-shadow: rgba(196, 112, 219, 0.4) 0px 5px, rgba(196, 112, 219, 0.3) 0px 10px,
+            rgba(196, 112, 219, 0.2) 0px 15px, rgba(196, 112, 219, 0.1) 0px 20px, rgba(196, 112, 219, 0.05) 0px 25px;
+    }
+}

@@ -4,6 +4,8 @@ import images from '~/assets/images';
 import Button from '~/components/Button';
 import Project from '~/components/Project';
 import projects_data from '~/data/projects';
+import SkillBox from '~/components/SkillBox';
+import { skills, tools } from '~/data/skills';
 import { useTranslation } from 'react-i18next';
 
 const cs = classNames.bind(styles);
@@ -21,9 +23,7 @@ function Home() {
                         developer */}
                         {t('Home.title')}
                     </h1>
-                    <p className={cs('information-desc')}>
-                        He crafts responsive websites where technologies meet creativity
-                    </p>
+                    <p className={cs('information-desc')}>{t('Home.sub-title')}</p>
                     <Button to="/contact">Contact ME ##</Button>
                 </div>
                 <div className={cs('information-image')}>
@@ -49,9 +49,6 @@ function Home() {
                     </a>
                 </div>
                 <div className={cs('project-list')}>
-                    {/* <Project />
-                    <Project />
-                    <Project /> */}
                     {first_3_projects.map((project, index) => (
                         <Project
                             key={index}
@@ -66,46 +63,21 @@ function Home() {
             <div className={cs('skills')}>
                 <h2 className={cs('h2')}>skills</h2>
                 <div className={cs('skills-content')}>
-                    <div className={cs('skills-content__decor')}>
-                        <img src={images.outlineLogo} className={cs('skills-content__outline-logo')} alt="Avatar" />
-                        <img src={images.dot1} className={cs('skills-content__dot1')} alt="Avatar" />
-                        <img src={images.dot2} className={cs('skills-content__dot2')} alt="Avatar" />
+                    <h3>
+                        Some of my <strong>skills</strong>
+                    </h3>
+                    <div className={cs('my-skills')}>
+                        {skills.map((skill, index) => (
+                            <SkillBox key={index} image={skill.image} name={skill.name} />
+                        ))}
                     </div>
-                    <div className={cs('skills-content__skill-lists')}>
-                        <div className={cs('skill-lists__block')}>
-                            <p className={cs('block-name')}>Languages</p>
-                            <ul className={cs('block-list')}>
-                                <li className={cs('block-item')}>TypeScript</li>
-                                <li className={cs('block-item')}>JavaScript</li>
-                                <li className={cs('block-item')}>Java</li>
-                            </ul>
-                        </div>
-                        <div className={cs('skill-lists__block')}>
-                            <p className={cs('block-name')}>Database</p>
-                            <ul className={cs('block-list')}>
-                                <li className={cs('block-item')}>SQL Server</li>
-                                <li className={cs('block-item')}>MongoDB</li>
-                                <li className={cs('block-item')}>MySQL</li>
-                            </ul>
-                        </div>
-                        <div className={cs('skill-lists__block')}>
-                            <p className={cs('block-name')}>Other</p>
-                            <ul className={cs('block-list')}>
-                                <li className={cs('block-item')}>HTML</li>
-                                <li className={cs('block-item')}>CSS</li>
-                                <li className={cs('block-item')}>SASS</li>
-                                <li className={cs('block-item')}>SCSS</li>
-                                <li className={cs('block-item')}>Node.js</li>
-                            </ul>
-                        </div>
-                        <div className={cs('skill-lists__block')}>
-                            <p className={cs('block-name')}>Frameworks</p>
-                            <ul className={cs('block-list')}>
-                                <li className={cs('block-item')}>React</li>
-                                <li className={cs('block-item')}>Express</li>
-                                <li className={cs('block-item')}>Spring Boot</li>
-                            </ul>
-                        </div>
+                    <h3>
+                        <strong>Tools</strong> I use
+                    </h3>
+                    <div className={cs('tools')}>
+                        {tools.map((skill, index) => (
+                            <SkillBox key={index} image={skill.image} name={skill.name} />
+                        ))}
                     </div>
                 </div>
             </div>
@@ -113,15 +85,8 @@ function Home() {
                 <div className={cs('about-content')}>
                     <h2 className={cs('about-header')}>about</h2>
                     <div className={cs('about-content')}>
-                        <p className={cs('about-desc')}>
-                            I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive
-                            websites from scratch and raise them into modern user-friendly web experiences.
-                        </p>
-                        <p className={cs('about-desc')}>
-                            Transforming my creativity and knowledge into a websites has been my passion for over a
-                            year. I have been helping various clients to establish their presence online. I always
-                            strive to learn about the newest technologies and frameworks.
-                        </p>
+                        <p className={cs('about-desc')}>{t('Home.about.part1')}</p>
+                        <p className={cs('about-desc')}>{t('Home.about.part2')}</p>
                     </div>
                     <Button medium to="/about">
                         View all -&gt;
@@ -132,14 +97,11 @@ function Home() {
             <div className={cs('contact')}>
                 <h2 className={cs('h2')}>contact</h2>
                 <div className={cs('contact-content')}>
-                    <p className={cs('contact-text')}>
-                        I’m interested in freelance opportunities. However, if you have other request or question, don’t
-                        hesitate to contact me
-                    </p>
+                    <p className={cs('contact-text')}>{t('Home.contact')}</p>
                     <div className={cs('contact-info')}>
                         <p className={cs('contact-info__text')}>Message me here</p>
                         <a href="https://discord.com" className={cs('contact-media')}>
-                            <img src={images.discord} alt="discord" />
+                            <img src={images.linkedin} alt="discord" />
                             <p>Trung Trần#4085</p>
                         </a>
                         <a href="https://mail.google.com" className={cs('contact-media')}>

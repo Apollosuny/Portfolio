@@ -1,8 +1,30 @@
 {
     "Home": {
-        "title": "Welcome to React and react-i18next hahaha"
+        "title": "Hello everyone! I'M TRAN BAO TRUNG",
+        "sub-title": "I'm a back-end developer",
+        "about": {
+            "part1": "I am currently a second year student majoring in MIS International School - Hanoi National University. I have a passion for Website development, I focus on the backend of a website - operations related to processing, logic, working with databases...",
+            "part2": "I am a person who is always eager to learn and absorb new things to develop myself. Besides, I am also looking for real work or projects to gain more experience and improve my problem solving ability."
+        },
+        "contact": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me"
     },
     "Projects": {
-        "desc": "All of my project aaaa"
-    }
+        "desc": "A few projects I've done"
+    },
+    "About": {
+        "desc": {
+            "part1": "Hello everyone, I am Tran Bao Trung from Hanoi, Vietnam",
+            "part2": "I am currently a second year student majoring in MIS International School - Hanoi National University. I have a passion for Website development, I focus on the backend of a website - operations related to processing, logic, working with databases...",
+            "part3": "I am a person who is always eager to learn and absorb new things to develop myself. Besides, I am also looking for real work or projects to gain more experience and improve my problem solving ability."
+        },
+        "fun-facts": {
+            "fact1": "I like winter more than summer",
+            "fact2": "I love cooking",
+            "fact3": "I often bike around the city",
+            "fact4": "I spend most of my free time on self-development",
+            "fact5": "I am keen on learning foreign languages",
+            "fact6": "I like to collect things with strange shapes"
+        }
+    },
+    "Contact": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me"
 }

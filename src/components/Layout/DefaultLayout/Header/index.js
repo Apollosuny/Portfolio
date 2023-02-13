@@ -3,28 +3,40 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Navbar from './Navbar';
 import { useState } from 'react';
+import links from '~/Link';
+import i18next from 'i18next';
 
 const cx = classNames.bind(styles);
+const languages = ['EN', 'VI', 'JP'];
 
 function Header() {
     const [checked, setChecked] = useState(false);
+    const [language, setLanguage] = useState('EN');
+    const [show, setShow] = useState(false);
 
     const getClass = (event) => {
         if (event.currentTarget.className) setChecked(false);
     };
+
+    const handleChangeLanguage = (item) => {
+        i18next.changeLanguage(item.toLowerCase());
+        setLanguage(item);
+    };
+
+    let rest_language = languages.filter((item) => item !== language);
 
     return (
         <header className={cx('wrapper')}>
             <div className={cx('media-header')}>
                 <span className={cx('media-header__line')}></span>
                 <div id="media-links" className={cx('media-header__links')}>
-                    <a href="https://discord.com/" className={cx('media')}>
-                        <img src={images.discord} alt="discord" className={cx('media-icon')} />
+                    <a href={links.linkedin} className={cx('media')}>
+                        <img src={images.linkedin} alt="discord" className={cx('media-icon')} />
                     </a>
-                    <a href="https://github.com/" className={cx('media')}>
+                    <a href={links.github} className={cx('media')}>
                         <img src={images.github} alt="github" className={cx('media-icon')} />
                     </a>
-                    <a href="https://mail.google.com/" className={cx('media')}>
+                    <a href={links.mail} className={cx('media')}>
                         <img src={images.mail} alt="mail" className={cx('media-icon')} />
                     </a>
                 </div>
@@ -40,10 +52,17 @@ function Header() {
                     </div>
                     <div id="dropdown" className={cx('dropdown')}>
                         <div className={cx('current-language')}>
-                            EN
+                            {language}
                             <div className={cx('language-list')}>
-                                <div className={cx('language')}>VI</div>
-                                <div className={cx('language')}>JP</div>
+                                {rest_language.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className={cx('language')}
+                                        onClick={() => handleChangeLanguage(item)}
+                                    >
+                                        {item}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -66,17 +85,29 @@ function Header() {
                             <Navbar />
                         </div>
                         <div id="dropdown" className={cx('mobile__dropdown')}>
-                            <div className={cx('mobile__current-language')}>
-                                EN
-                                <div className={cx('mobile__language-list')} onClick={getClass}>
-                                    <div className={cx('mobile__language')}>VI</div>
-                                    <div className={cx('mobile__language')}>JP</div>
-                                </div>
+                            <div
+                                className={cx(show ? 'mobile__current-language-up' : 'mobile__current-language-down')}
+                                onClick={() => setShow(!show)}
+                            >
+                                {language}
+                                {show && (
+                                    <div className={cx('mobile__language-list')} onClick={getClass}>
+                                        {rest_language.map((item, index) => (
+                                            <div
+                                                key={index}
+                                                className={cx('mobile__language')}
+                                                onClick={() => handleChangeLanguage(item)}
+                                            >
+                                                {item}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                         <div id="media-links" className={cx('mobile__media-header__links')}>
                             <a href="https://discord.com/" className={cx('media')}>
-                                <img src={images.discord} alt="discord" className={cx('media-icon')} />
+                                <img src={images.linkedin} alt="discord" className={cx('media-icon')} />
                             </a>
                             <a href="https://github.com/" className={cx('media')}>
                                 <img src={images.github} alt="github" className={cx('media-icon')} />

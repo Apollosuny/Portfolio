@@ -1,8 +1,30 @@
 {
     "Home": {
-        "title": "Chào mừng đến với trang cá nhân của Trung Trần"
+        "title": "Chào mọi người! Mình là TRẦN BẢO TRUNG",
+        "sub-title": "Mình là người phát triển Web (back-end)",
+        "about": {
+            "part1": "Mình hiện tại là sinh viên năm hai ngành Hệ thống thông tin quản lý, Trường quốc tế - Đại học quốc gia Hà Nội. Mình có một niềm đam mê với phát triển Website, mình tập trung vào phía sau của một website (backend) - những thao tác liên quan đến xử lý, logic, làm việc với database…",
+            "part2": "Mình là người luôn ham học hỏi, tiếp thu những cái mới để bản thân ngày càng phát triển. Bên cạnh đó, mình cũng đang tìm kiếm những công việc hoặc những dự án thực tế để có thêm kinh nghiệm và nâng cao khả năng giải quyết vấn đề."
+        },
+        "contact": "Mình quan tâm đến các cơ hội làm việc tự do. Tuy nhiên, nếu bạn có yêu cầu hoặc câu hỏi khác, đừng ngần ngại liên hệ với mình"
     },
     "Projects": {
-        "desc": "Tất cả project của tôi"
-    }
+        "desc": "Một số dự án tôi đã thực hiện"
+    },
+    "About": {
+        "desc": {
+            "part1": "Chào mọi người, mình là Trần Bảo Trung đến từ Hà Nội, Việt Nam",
+            "part2": "Mình hiện tại là sinh viên năm hai ngành Hệ thống thông tin quản lý, Trường quốc tế - Đại học quốc gia Hà Nội. Mình có một niềm đam mê với phát triển Website, mình tập trung vào phía sau của một website (backend) - những thao tác liên quan đến xử lý, logic, làm việc với database…",
+            "part3": "Mình là người luôn ham học hỏi, tiếp thu những cái mới để bản thân ngày càng phát triển. Bên cạnh đó, mình cũng đang tìm kiếm những công việc hoặc những dự án thực tế để có thêm kinh nghiệm và nâng cao khả năng giải quyết vấn đề."
+        },
+        "fun-facts": {
+            "fact1": "Mình thích mùa đông hơn mùa hè",
+            "fact2": "Mình yêu nấu ăn",
+            "fact3": "Mình thường đạp xe vòng quanh thành phố",
+            "fact4": "Mình dành phần lớn thời gian rảnh cho phát triển bản thân",
+            "fact5": "Mình thích học ngoại ngữ ",
+            "fact6": "Mình thích sưu tập những thứ có hình dạng kì lạ"
+        }
+    },
+    "Contact": "Mình quan tâm đến các cơ hội làm việc tự do. Tuy nhiên, nếu bạn có yêu cầu hoặc câu hỏi khác, đừng ngần ngại liên hệ với mình"
 }

@@ -78,8 +78,7 @@
     position: relative;
 }
 
-.current-language,
-.mobile__current-language {
+.current-language {
     color: var(--gray);
 
     &::after {
@@ -102,6 +101,39 @@
 
     &:hover::after {
         rotate: 180deg;
+    }
+}
+
+.mobile__current-language-down {
+    color: var(--gray);
+
+    &::after {
+        content: 'V';
+        display: inline-block;
+        scale: 1 0.3;
+        font-weight: 600;
+        margin-left: 4px;
+    }
+
+    .mobile__language-list {
+        display: none;
+    }
+}
+
+.mobile__current-language-up {
+    color: var(--word-color);
+
+    &::after {
+        content: 'V';
+        display: inline-block;
+        scale: 1 0.3;
+        font-weight: 600;
+        margin-left: 4px;
+        rotate: 180deg;
+    }
+
+    .mobile__language-list {
+        display: block;
     }
 }
 

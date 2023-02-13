@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Footer.module.scss';
 import images from '~/assets/images';
+import links from '~/Link';
 
 const cx = classNames.bind(styles);
 
@@ -15,7 +16,7 @@ function Footer() {
                                 <img src={images.logo} alt="logo" />
                                 <span>Apollo</span>
                             </div>
-                            <a href="" className={cx('footer-email')}>
+                            <a href={links.mail} target="_blank" rel="noreferrer" className={cx('footer-email')}>
                                 baotrung06092003@gmail.com
                             </a>
                         </div>
@@ -24,14 +25,14 @@ function Footer() {
                     <div className={cx('footer-media')}>
                         <span>Media</span>
                         <div className={cx('media-links')}>
-                            <a href="" className={cx('media')}>
-                                <img src={images.figma} alt="figma" />
+                            <a href={links.instagram} target="_blank" rel="noreferrer" className={cx('media')}>
+                                <img src={images.insta} alt="instagram" />
                             </a>
-                            <a href="" className={cx('media')}>
+                            <a href={links.github} target="_blank" rel="noreferrer" className={cx('media')}>
                                 <img src={images.github} alt="github" />
                             </a>
-                            <a href="" className={cx('media')}>
-                                <img src={images.discord} alt="discord" />
+                            <a href={links.linkedin} target="_blank" rel="noreferrer" className={cx('media')}>
+                                <img src={images.linkedin} alt="discord" />
                             </a>
                         </div>
                     </div>
