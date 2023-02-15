@@ -17,10 +17,6 @@ function Contact() {
             <div className={cx('content')}>
                 <p className={cx('content-desc')}>{t('Contact')}</p>
                 <div className={cx('contact-info')}>
-                    <div className={cx('support')}>
-                        <p className={cx('support-title')}>Support me here</p>
-                        <p className={cx('support-number')}>0123412324123</p>
-                    </div>
                     <div className={cx('contact-media')}>
                         <p className={cx('contact-media__title')}>Message me here</p>
                         <div className={cx('contact-media__link')}>

@@ -20,7 +20,7 @@ function Footer() {
                                 baotrung06092003@gmail.com
                             </a>
                         </div>
-                        <p className={cx('footer-desc')}>Web designer and front-end developer based in Vietnam</p>
+                        <p className={cx('footer-desc')}>Back-end developer based in Vietnam</p>
                     </div>
                     <div className={cx('footer-media')}>
                         <span>Media</span>

@@ -1,12 +1,21 @@
 {
     "Home": {
-        "title": "Hello everyone! I'M TRAN BAO TRUNG",
+        "title": "Hello everyone! I'M <bold>TRAN BAO TRUNG</bold>",
         "sub-title": "I'm a back-end developer",
+        "job": "Currently studying at <a>University</a>",
+        "quote": "By failing to prepare, you are preparing to fail",
+        "author": "Benjamin Franklin",
+        "project": "projects",
+        "skill": "skills",
         "about": {
+            "heading": "about",
             "part1": "I am currently a second year student majoring in MIS International School - Hanoi National University. I have a passion for Website development, I focus on the backend of a website - operations related to processing, logic, working with databases...",
             "part2": "I am a person who is always eager to learn and absorb new things to develop myself. Besides, I am also looking for real work or projects to gain more experience and improve my problem solving ability."
         },
-        "contact": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me"
+        "contact": {
+            "heading": "contact",
+            "desc": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me"
+        }
     },
     "Projects": {
         "desc": "A few projects I've done"

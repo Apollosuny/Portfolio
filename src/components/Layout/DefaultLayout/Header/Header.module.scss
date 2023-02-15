@@ -78,7 +78,7 @@
     position: relative;
 }
 
-.current-language {
+.current-language-down {
     color: var(--gray);
 
     &::after {
@@ -93,14 +93,23 @@
         color: var(--word-color);
         cursor: pointer;
     }
+}
 
-    &:hover .language-list,
-    &:hover .mobile__language-list {
-        display: block;
+.current-language-up {
+    color: var(--gray);
+
+    &::after {
+        content: 'V';
+        display: inline-block;
+        scale: 1 0.3;
+        font-weight: 600;
+        margin-left: 4px;
+        rotate: 180deg;
     }
 
-    &:hover::after {
-        rotate: 180deg;
+    &:hover {
+        color: var(--word-color);
+        cursor: pointer;
     }
 }
 
@@ -140,14 +149,13 @@
 .language-list,
 .mobile__language-list {
     position: absolute;
-    display: none;
+    display: block;
     list-style: none;
     border: 1px solid var(--gray);
     color: var(--gray);
 
     .language,
     .mobile__language {
-        // z-index: 999;
         padding: 8px;
         color: var(--gray);
 
@@ -198,8 +206,9 @@
     .mobile__dropdown {
         position: absolute;
         font-size: 2.4rem;
-        top: 50px;
+        top: 40px;
         right: 16px;
+        margin-top: 20px;
     }
 
     .mobile__options {

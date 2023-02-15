@@ -1,12 +1,19 @@
 {
     "Home": {
-        "title": "Chào mọi người! Mình là TRẦN BẢO TRUNG",
+        "title": "Chào mọi người! Mình là <bold>TRẦN BẢO TRUNG</bold>",
         "sub-title": "Mình là người phát triển Web (back-end)",
+        "job": "Hiện tại đang học <a>Đại học</a>",
+        "project": "dự án",
+        "skill": "kỹ năng",
         "about": {
+            "heading": "Bản thân",
             "part1": "Mình hiện tại là sinh viên năm hai ngành Hệ thống thông tin quản lý, Trường quốc tế - Đại học quốc gia Hà Nội. Mình có một niềm đam mê với phát triển Website, mình tập trung vào phía sau của một website (backend) - những thao tác liên quan đến xử lý, logic, làm việc với database…",
             "part2": "Mình là người luôn ham học hỏi, tiếp thu những cái mới để bản thân ngày càng phát triển. Bên cạnh đó, mình cũng đang tìm kiếm những công việc hoặc những dự án thực tế để có thêm kinh nghiệm và nâng cao khả năng giải quyết vấn đề."
         },
-        "contact": "Mình quan tâm đến các cơ hội làm việc tự do. Tuy nhiên, nếu bạn có yêu cầu hoặc câu hỏi khác, đừng ngần ngại liên hệ với mình"
+        "contact": {
+            "heading": "liên hệ",
+            "desc": "Mình quan tâm đến các cơ hội làm việc tự do. Tuy nhiên, nếu bạn có yêu cầu hoặc câu hỏi khác, đừng ngần ngại liên hệ với mình"
+        }
     },
     "Projects": {
         "desc": "Một số dự án tôi đã thực hiện"

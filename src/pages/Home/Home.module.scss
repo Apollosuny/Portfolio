@@ -13,7 +13,7 @@
 }
 
 .information-title {
-    min-width: 300px;
+    min-width: 260px;
     font-weight: 600;
 
     span {
@@ -167,8 +167,8 @@
     flex-wrap: wrap;
     text-align: center;
 
-    h3 {
-        font-size: 2.4rem;
+    h1 {
+        font-size: 2.8rem;
         margin: 26px 0 12px 0;
 
         strong {
@@ -342,6 +342,11 @@
         right: 90px;
     }
 
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .about {
         flex-direction: column;
     }
@@ -349,6 +354,24 @@
     .about-header {
         &::after {
             left: 88px;
+        }
+    }
+}
+
+@media (max-width: 280px) {
+    .about-image {
+        width: 200px;
+    }
+
+    .contact-content {
+        .contact-info {
+            padding: 8px;
+
+            .contact-media {
+                p {
+                    font-size: 1.2rem;
+                }
+            }
         }
     }
 }

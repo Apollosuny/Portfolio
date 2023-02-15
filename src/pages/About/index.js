@@ -28,17 +28,17 @@ function About() {
             <div className={cx('skills')}>
                 <h2 className={cx('h2')}>skills</h2>
                 <div className={cx('skill-content')}>
-                    <h3>
+                    <h1>
                         Some of my <strong>skills</strong>
-                    </h3>
+                    </h1>
                     <div className={cx('my-skills')}>
                         {skills.map((skill, index) => (
                             <SkillBox key={index} image={skill.image} name={skill.name} />
                         ))}
                     </div>
-                    <h3>
+                    <h1>
                         <strong>Tools</strong> I use
-                    </h3>
+                    </h1>
                     <div className={cx('tools')}>
                         {tools.map((skill, index) => (
                             <SkillBox key={index} image={skill.image} name={skill.name} />

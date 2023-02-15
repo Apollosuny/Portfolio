@@ -11,8 +11,17 @@ const languages = ['EN', 'VI', 'JP'];
 
 function Header() {
     const [checked, setChecked] = useState(false);
-    const [language, setLanguage] = useState('EN');
+    const [language, setLanguage] = useState(() => {
+        if (getCookie('i18next') === 'undefined') return 'EN';
+        else return getCookie('i18next').toUpperCase();
+    });
     const [show, setShow] = useState(false);
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
 
     const getClass = (event) => {
         if (event.currentTarget.className) setChecked(false);
@@ -21,6 +30,7 @@ function Header() {
     const handleChangeLanguage = (item) => {
         i18next.changeLanguage(item.toLowerCase());
         setLanguage(item);
+        window.scrollTo(0, 0);
     };
 
     let rest_language = languages.filter((item) => item !== language);
@@ -51,19 +61,25 @@ function Header() {
                         <Navbar />
                     </div>
                     <div id="dropdown" className={cx('dropdown')}>
-                        <div className={cx('current-language')}>
+                        <div
+                            className={cx(show ? 'current-language-up' : 'current-language-down')}
+                            onClick={() => setShow(!show)}
+                        >
                             {language}
-                            <div className={cx('language-list')}>
-                                {rest_language.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className={cx('language')}
-                                        onClick={() => handleChangeLanguage(item)}
-                                    >
-                                        {item}
-                                    </div>
-                                ))}
-                            </div>
+
+                            {show && (
+                                <div className={cx('language-list')}>
+                                    {rest_language.map((item, index) => (
+                                        <div
+                                            key={index}
+                                            className={cx('language')}
+                                            onClick={() => handleChangeLanguage(item)}
+                                        >
+                                            {item}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
