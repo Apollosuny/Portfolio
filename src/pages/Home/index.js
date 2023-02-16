@@ -21,7 +21,12 @@ function Home() {
                         <Trans components={{ bold: <span /> }}>Home.title</Trans>
                     </h1>
                     <p className={cs('information-desc')}>{t('Home.sub-title')}</p>
-                    <Button to="/contact">Contact ME ##</Button>
+                    <Button
+                        to="/contact"
+                        className={cs(t('Home.button-contact').length > 13 ? 'button-contact-vi' : 'button-contact')}
+                    >
+                        {t('Home.button-contact')}
+                    </Button>
                 </div>
                 <div className={cs('information-image')}>
                     <img src={images.outlineLogo} className={cs('information-outline-logo')} alt="Avatar" />
@@ -44,8 +49,6 @@ function Home() {
                 </div>
             </div>
             <figure className={cs('quote')}>
-                {' '}
-                {/*With great power comes great electricity bill*/}
                 <blockquote className={cs('quote-text')}>{t('Home.quote')}</blockquote>
                 <figcaption className={cs('quote-author')}>{t('Home.author')}</figcaption>
             </figure>
@@ -53,7 +56,7 @@ function Home() {
                 <div className={cs('projects-header')}>
                     <h2 className={cs('h2')}>{t('Home.project')}</h2>
                     <a href="/projects" className={cs('projects-header__link')}>
-                        View all ~~&gt;
+                        {t('Home.view-all')}
                     </a>
                 </div>
                 <div className={cs('project-list')}>
@@ -69,10 +72,10 @@ function Home() {
                 </div>
             </div>
             <div className={cs('skills')}>
-                <h2 className={cs('h2')}>{t('Home.skill')}</h2>
+                <h2 className={cs('h2')}>{t('Home.skill.heading')}</h2>
                 <div className={cs('skills-content')}>
                     <h1>
-                        Some of my <strong>skills</strong>
+                        <Trans components={{ bold: <strong /> }}>Home.skill.part1</Trans>
                     </h1>
                     <div className={cs('my-skills')}>
                         {skills.map((skill, index) => (
@@ -80,7 +83,7 @@ function Home() {
                         ))}
                     </div>
                     <h1>
-                        <strong>Tools</strong> I use
+                        <Trans components={{ bold: <strong /> }}>Home.skill.part2</Trans>
                     </h1>
                     <div className={cs('tools')}>
                         {tools.map((skill, index) => (
@@ -91,13 +94,15 @@ function Home() {
             </div>
             <div className={cs('about')}>
                 <div className={cs('about-content')}>
-                    <h2 className={cs('about-header')}>{t('Home.about.heading')}</h2>
+                    <h2 className={cs(t('Home.about.heading').length > 5 ? 'about-header-vi' : 'about-header')}>
+                        {t('Home.about.heading')}
+                    </h2>
                     <div className={cs('about-content')}>
                         <p className={cs('about-desc')}>{t('Home.about.part1')}</p>
                         <p className={cs('about-desc')}>{t('Home.about.part2')}</p>
                     </div>
-                    <Button medium to="/about">
-                        View all -&gt;
+                    <Button medium to="/about" className={cs(t('Home.about.button').length > 11 ? '' : 'button-about')}>
+                        {t('Home.about.button')}
                     </Button>
                 </div>
                 <img src={images.aboutMe} className={cs('about-image')} alt="avatar" />

@@ -11,11 +11,11 @@ function Contact() {
     return (
         <>
             <div className={cx('path')}>
-                <h1 className={cx('path__name')}>contacts</h1>
+                <h1 className={cx('path__name')}>{t('Contact.title')}</h1>
                 <p className={cx('path__desc')}>Who am i</p>
             </div>
             <div className={cx('content')}>
-                <p className={cx('content-desc')}>{t('Contact')}</p>
+                <p className={cx('content-desc')}>{t('Contact.desc')}</p>
                 <div className={cx('contact-info')}>
                     <div className={cx('contact-media')}>
                         <p className={cx('contact-media__title')}>Message me here</p>
@@ -33,7 +33,7 @@ function Contact() {
                 </div>
             </div>
             <div className={cx('all-media')}>
-                <h2 className={cx('h2', 'hashtag')}>all-media</h2>
+                <h2 className={cx('h2')}>all-media</h2>
                 <ul className={cx('media-lists')}>
                     <li>
                         <a href={links.facebook} target="_blank" rel="noreferrer" className={cx('media-item')}>

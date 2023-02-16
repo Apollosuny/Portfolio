@@ -3,7 +3,7 @@ import styles from './About.module.scss';
 import images from '~/assets/images';
 import SkillBox from '~/components/SkillBox';
 import { skills, tools } from '~/data/skills';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 const cx = classNames.bind(styles);
 
@@ -12,7 +12,7 @@ function About() {
     return (
         <>
             <div className={cx('path')}>
-                <h1 className={cx('path__name')}>about-me</h1>
+                <h1 className={cx('path__name')}>{t('About.title')}</h1>
                 <p className={cx('path__desc')}>Who am i</p>
             </div>
             <div className={cx('about')}>
@@ -26,10 +26,10 @@ function About() {
                 </div>
             </div>
             <div className={cx('skills')}>
-                <h2 className={cx('h2')}>skills</h2>
+                <h2 className={cx('h2')}>{t('About.skill')}</h2>
                 <div className={cx('skill-content')}>
                     <h1>
-                        Some of my <strong>skills</strong>
+                        <Trans components={{ bold: <strong /> }}>Home.skill.part1</Trans>
                     </h1>
                     <div className={cx('my-skills')}>
                         {skills.map((skill, index) => (
@@ -37,7 +37,7 @@ function About() {
                         ))}
                     </div>
                     <h1>
-                        <strong>Tools</strong> I use
+                        <Trans components={{ bold: <strong /> }}>Home.skill.part2</Trans>
                     </h1>
                     <div className={cx('tools')}>
                         {tools.map((skill, index) => (
@@ -47,7 +47,7 @@ function About() {
                 </div>
             </div>
             <div className={cx('facts')}>
-                <h2 className={cx('h2')}>fun-facts</h2>
+                <h2 className={cx('h2')}>{t('About.fun-facts.heading')}</h2>
                 <div className={cx('fun-facts')}>
                     <div className={cx('fact')}>{t('About.fun-facts.fact1')}</div>
                     <div className={cx('fact')}>{t('About.fun-facts.fact2')}</div>
