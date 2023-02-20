@@ -7,6 +7,7 @@ import projects_data from '~/data/projects';
 import SkillBox from '~/components/SkillBox';
 import { skills, tools } from '~/data/skills';
 import { Trans, useTranslation } from 'react-i18next';
+import links from '~/Link';
 
 const cs = classNames.bind(styles);
 const first_3_projects = projects_data.slice(0, 3);
@@ -113,11 +114,11 @@ function Home() {
                     <p className={cs('contact-text')}>{t('Home.contact.desc')}</p>
                     <div className={cs('contact-info')}>
                         <p className={cs('contact-info__text')}>Message me here</p>
-                        <a href="https://discord.com" className={cs('contact-media')}>
+                        <a href={links.linkedin} target="_blank" className={cs('contact-media')}>
                             <img src={images.linkedin} alt="discord" />
                             <p>Trung Trần</p>
                         </a>
-                        <a href="https://mail.google.com" className={cs('contact-media')}>
+                        <a href={links.mail} target="_blank" className={cs('contact-media')}>
                             <img src={images.mail} alt="mail" />
                             <p>baotrung06092003@gmail.com</p>
                         </a>
