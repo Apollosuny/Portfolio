@@ -114,11 +114,11 @@ function Home() {
                     <p className={cs('contact-text')}>{t('Home.contact.desc')}</p>
                     <div className={cs('contact-info')}>
                         <p className={cs('contact-info__text')}>Message me here</p>
-                        <a href={links.linkedin} target="_blank" className={cs('contact-media')}>
+                        <a href={links.linkedin} target="_blank" rel="noreferrer" className={cs('contact-media')}>
                             <img src={images.linkedin} alt="discord" />
                             <p>Trung Trần</p>
                         </a>
-                        <a href={links.mail} target="_blank" className={cs('contact-media')}>
+                        <a href={links.mail} target="_blank" rel="noreferrer" className={cs('contact-media')}>
                             <img src={images.mail} alt="mail" />
                             <p>baotrung06092003@gmail.com</p>
                         </a>

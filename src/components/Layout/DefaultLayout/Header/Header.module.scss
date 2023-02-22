@@ -78,7 +78,8 @@
     position: relative;
 }
 
-.current-language-down {
+.current-language-down,
+.current-language-up {
     color: var(--gray);
 
     &::after {
@@ -96,20 +97,8 @@
 }
 
 .current-language-up {
-    color: var(--gray);
-
     &::after {
-        content: 'V';
-        display: inline-block;
-        scale: 1 0.3;
-        font-weight: 600;
-        margin-left: 4px;
         rotate: 180deg;
-    }
-
-    &:hover {
-        color: var(--word-color);
-        cursor: pointer;
     }
 }
 
